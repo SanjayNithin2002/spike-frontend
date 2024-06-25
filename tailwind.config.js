@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        redSpike: '#d82525',
+        whiteSpike: '#e4e2dd',
+      },
+      fontFamily: {
+        redHat: ['Red Hat Display', 'sans-serif'],
+      }
+    },
   },
   plugins: [],
 }
