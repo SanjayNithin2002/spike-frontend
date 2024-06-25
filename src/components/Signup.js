@@ -5,7 +5,7 @@ import './Auth.css';
 const Signup = () => {
   return (
     <div className="flex h-screen font-redHat">
-      <div className="w-1/2 bg-redSpike text-whiteSpike p-8 flex flex-col justify-center items-center">
+      <div className="w-5/12 bg-redSpike text-whiteSpike p-8 flex flex-col justify-center items-center">
         <h1 className="text-8xl font-bold mb-20">spike</h1>
         <ul className="space-y-4 text-lg">
           <li>meet spike, a productivity tool that has <span className="font-semibold italic">consequences.</span></li>
@@ -14,14 +14,14 @@ const Signup = () => {
           <li>so just sign up and get to work bro</li>
         </ul>
       </div>
-      <div className="w-1/2 bg-whiteSpike p-16 flex flex-col justify-center">
+      <div className="w-7/12 bg-whiterSpike p-16 flex flex-col justify-center">
         <h2 className="text-4xl font-bold mb-2 text-redSpike">new here?</h2>
         <p className="text-4xl font-bold mb-2 text-redSpike">well, let’s get to work.</p>
         <h3 className="text-xl font-semibold mb-4 text-redSpike">create an account</h3>
-        <form className="space-y-4">
-          <input type="email" placeholder="email" className="w-full p-3 border border-gray-300 rounded" required />
-          <input type="password" placeholder="password" className="w-full p-3 border border-gray-300 rounded" required />
-          <input type="password" placeholder="confirm password" className="w-full p-3 border border-gray-300 rounded" required />
+        <form className="space-y-4 justify-center items-center">
+          <input type="email" placeholder="email" className="w-2/3 p-3 border border-gray-300 rounded justify-center" required />
+          <input type="password" placeholder="password" className="w-2/3 p-3 border border-gray-300 rounded" required />
+          <input type="password" placeholder="confirm password" className="w-2/3 p-3 border border-gray-300 rounded" required />
           <button type="submit" className="w-full p-3 bg-redSpike text-white rounded">sign up</button>
         </form>
         <div className="my-4 text-center text-gray-600">or continue with</div>

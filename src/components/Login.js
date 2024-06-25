@@ -5,7 +5,7 @@ import './Auth.css';
 const Login = () => {
   return (
     <div className="flex h-screen font-redHat">
-      <div className="w-1/2 bg-redSpike text-white p-8 flex flex-col justify-center items-center">
+      <div className="w-5/12 bg-redSpike text-whiteSpike p-8 flex flex-col justify-center items-center">
         <h1 className="text-8xl font-bold mb-20">spike</h1>
         <ul className="space-y-4 text-lg">
           <li>meet spike, a productivity tool that has <span className="font-semibold italic">consequences.</span></li>
@@ -14,7 +14,7 @@ const Login = () => {
           <li>so just log in and get to work bro</li>
         </ul>
       </div>
-      <div className="w-1/2 bg-whiteSpike p-16 flex flex-col justify-center">
+      <div className="w-7/12 bg-whiterSpike p-16 flex flex-col justify-center">
         <h2 className="text-4xl font-bold mb-2 text-redSpike">welcome back!</h2>
         <p className="text-4xl font-bold mb-2 text-redSpike">let’s get started, yeah?</p>
         <h3 className="text-xl font-semibold mb-4 text-redSpike">log back in</h3>
