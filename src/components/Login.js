@@ -26,6 +26,7 @@ const Login = () => {
         setLoginError(results.error);
       }
       else {
+        localStorage.setItem('token', results.token)
         navigate('/create');
       }
     }
