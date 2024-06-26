@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import LoadingIndicator from './LoadingIndicator';
+import InfoPanel from './InfoPanel';
 
 const Signup = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -39,15 +40,7 @@ const Signup = () => {
 
   return (
     <div className="flex h-screen font-redHat w-full">
-      <div className="w-4/12 bg-redSpike text-whiteSpike p-8 flex flex-col justify-center items-center h-full">
-        <h1 className="text-8xl font-bold mb-20">spike</h1>
-        <ul className="space-y-4 text-lg">
-          <li>meet spike, a productivity tool that has <span className="font-semibold italic">consequences.</span></li>
-          <li>spike focuses on monitoring your individual metrics and goal enforcement</li>
-          <li>think of spike as your annoying mom who kicks your rear every time you fall behind on your home work</li>
-          <li>so just sign up and get to work bro</li>
-        </ul>
-      </div>
+      <InfoPanel/>
 
       <div className="w-8/12 bg-whiterSpike p-16 flex flex-col justify-center items-center h-full">
         <h2 className="text-4xl font-semibold mb-2 text-redSpike text-center">new here?</h2>
