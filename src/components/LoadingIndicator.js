@@ -9,4 +9,5 @@ const LoadingIndicator = () => {
         </div>
     )
 }
+
 export default LoadingIndicator;

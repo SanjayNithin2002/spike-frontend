@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Signup from './Pages/Signup';
-import Login from './Pages/Login';
-import CreateSpike from './Pages/CreateSpike';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import CreateSpike from './components/CreateSpike';
 
 function App() {
   return (
