@@ -27,7 +27,7 @@ const Login = () => {
       }
       else {
         localStorage.setItem('token', results.token)
-        navigate('/create');
+        navigate('/home');
       }
     }
     catch (err) {

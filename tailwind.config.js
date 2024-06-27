@@ -9,6 +9,10 @@ module.exports = {
         redSpike: '#d82525',
         whiteSpike: '#e4e2dd',
         whiterSpike: '#f1f1f1',
+        graySpike: '#d9d9d9',
+        grayestSpike: '#8e8d8d',
+        blackSpike: '#262626',
+        whitestSpike: '#fafafa',
       },
       fontFamily: {
         redHat: ['Red Hat Display', 'sans-serif'],
