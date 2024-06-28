@@ -17,7 +17,13 @@ module.exports = {
       },
       fontFamily: {
         redHat: ['Red Hat Display', 'sans-serif'],
-      }
+      },
+      backgroundImage: {
+        'custom-radial-gradient': 'radial-gradient(#ffffff33_1px, #00091d_1px)',
+      },
+      backgroundSize: {
+        'custom-size': '20px 20px',
+      },
     },
   },
   plugins: [],

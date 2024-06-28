@@ -1,10 +1,16 @@
 import React from "react";
 import NavBar from "./NavBar";
+import { useNavigate } from "react-router-dom";
 
 const CreateSpike = () => {
-    return (
+    const navigate = useNavigate();
+    const gotToSelectRepos = () =>{
+        navigate("/selectRepos");
+    }
+    return (        
         <div className="font-redHat h-screen bg-whitestSpike">
-            <NavBar />
+            <div className="absolute top-0 z-[-2] h-full w-full bg-[#000000] bg-custom-radial-gradient bg-custom-size"></div>
+            <NavBar />            
             <div className="flex flex-col items-center mt-8">
                 <div className="relative mb-8">
                     <div className="absolute inset-1 bg-redSpike rounded-md"></div>
@@ -28,7 +34,7 @@ const CreateSpike = () => {
                         <div className="border-2 border-blackSpike p-4 rounded-md mt-10 bg-lightgraySpike">
                             <select className="bg-lightgraySpike text-redSpike p-4 rounded-md w-60">
                                 <option>send an email to my professor stating how i am slacking off</option>
-                                <option>more options</option>
+                                <option>more consequences</option>
                             </select>
                         </div>
                         <div className="text-redSpike font-bold mt-4 cursor-pointer">customize it</div>
@@ -37,10 +43,12 @@ const CreateSpike = () => {
                 <div className="border-2 border-blackSpike bg-lightgraySpike p-5 rounded-md mt-40 w-2/3 text-center text-redSpike text-xl">
                 if i don’t commit once on GitHub everyday, spike will send an email to my professor regarding how i’ve started slacking off.
                 </div>
-                <button className="bg-redSpike font-bold text-xl text-whitestSpike p-3 rounded-md mt-10 pl-5 pr-5">continue</button>
+                <button onClick={()=>gotToSelectRepos()} className="bg-redSpike font-bold text-xl text-whitestSpike p-3 rounded-md mt-10 pl-5 pr-5">continue</button>
             </div>
         </div>
     )
 }
 
 export default CreateSpike;
+
+
