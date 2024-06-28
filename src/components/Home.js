@@ -1,10 +1,14 @@
-// src/App.js
 import React from 'react';
 import NavBar from './NavBar';
+import { useNavigate } from 'react-router-dom';
 
 const App = () => {
-  return (
-    <div className='font-redHat'>
+    const navigate = useNavigate();
+    const gotToCreateSpike = () =>{
+        navigate("/createSpike");
+    }
+    return (
+    <div className='font-redHat h-screen bg-whitestSpike'>
         <NavBar />
         <div className="bg-graySpike bg-opacity-50 flex flex-col items-left w-full p-20 pl-8">
             <div className="text-blackSpike font-bold text-5xl pl-2 pb-3 pt-5">
@@ -27,7 +31,7 @@ const App = () => {
                 </ol>
             </div>
             <div className="mt-6 text-center pb-20">
-                <button className="bg-redSpike text-whitestSpike font-bold text-3xl py-6 px-8 rounded shadow hover:bg-redSpike bg-opacity-90 transition duration-300">
+                <button onClick={() => gotToCreateSpike()} className="bg-redSpike text-whitestSpike font-bold text-3xl py-6 px-8 rounded shadow hover:bg-redSpike bg-opacity-90 transition duration-300">
                     create your spike
                 </button>
             </div>

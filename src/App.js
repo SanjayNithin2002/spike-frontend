@@ -13,7 +13,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/create" element={<CreateSpike />} />
+        <Route path="/createspike" element={<CreateSpike />} />
       </Routes>
     </Router>
   );

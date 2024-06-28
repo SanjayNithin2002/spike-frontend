@@ -9,6 +9,7 @@ module.exports = {
         redSpike: '#d82525',
         whiteSpike: '#e4e2dd',
         whiterSpike: '#f1f1f1',
+        lightgraySpike: '#dfdfdf',
         graySpike: '#d9d9d9',
         grayestSpike: '#8e8d8d',
         blackSpike: '#262626',
