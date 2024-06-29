@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 
 const CreateSpike = () => {
     const gotToSelectRepos = () =>{
-        window.location.href = 'http://localhost:3000/integrations/github/callback';
+        window.location.href = 'https://spike-backend-yxt7.onrender.com/integrations/github/callback';
     }
     return (        
         <div className="font-redHat h-screen bg-whitestSpike">
