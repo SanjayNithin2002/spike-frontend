@@ -1,11 +1,9 @@
 import React from "react";
 import NavBar from "./NavBar";
-import { useNavigate } from "react-router-dom";
 
 const CreateSpike = () => {
-    const navigate = useNavigate();
     const gotToSelectRepos = () =>{
-        navigate("/selectRepos");
+        window.location.href = 'http://localhost:3000/integrations/github/callback';
     }
     return (        
         <div className="font-redHat h-screen bg-whitestSpike">
