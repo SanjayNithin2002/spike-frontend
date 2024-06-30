@@ -94,39 +94,46 @@ function SelectRepos() {
                             <Controller
                                 name="selectedOptions"
                                 control={control}
-                                render={({ field }) => (
-                                    <Select
-                                        {...field}
-                                        options={repos.map(repo => ({
-                                            key: repo.id,
-                                            value: {
-                                                repo: repo.name,
-                                                owner: repo.owner
-                                            },
-                                            label: (
-                                                <div className="flex justify-between items-center w-full">
-                                                    <div className="flex items-center">
-                                                        <img
-                                                            src={GithubLogo}
-                                                            alt="GitHub"
-                                                            className="h-5 w-5 mr-2"
-                                                        />
-                                                        {repo.full_name}
-                                                        {repo.visibility === 'private' && (
-                                                            <IoMdLock className="ml-1" />
-                                                        )}
+                                render={({ field }) => {
+                                    const selectedRepos = field.value || [];
+                                    const availableOptions = repos.filter(repo =>
+                                        !selectedRepos.some(selected => selected.value.repo === repo.name)
+                                    );
+
+                                    return (
+                                        <Select
+                                            {...field}
+                                            options={availableOptions.map(repo => ({
+                                                key: repo.id,
+                                                value: {
+                                                    repo: repo.name,
+                                                    owner: repo.owner
+                                                },
+                                                label: (
+                                                    <div className="flex justify-between items-center w-full">
+                                                        <div className="flex items-center">
+                                                            <img
+                                                                src={GithubLogo}
+                                                                alt="GitHub"
+                                                                className="h-5 w-5 mr-2"
+                                                            />
+                                                            {repo.full_name}
+                                                            {repo.visibility === 'private' && (
+                                                                <IoMdLock className="ml-1" />
+                                                            )}
+                                                        </div>
+                                                        <span className="text-gray-500 text-right text-sm ml-2">
+                                                            {formatPushedAt(repo.pushed_at)}
+                                                        </span>
                                                     </div>
-                                                    <span className="text-gray-500 text-right text-sm ml-2">
-                                                        {formatPushedAt(repo.pushed_at)}
-                                                    </span>
-                                                </div>
-                                            )
-                                        }))}
-                                        isMulti
-                                        className="w-full border border-blackSpike"
-                                        placeholder="search"
-                                    />
-                                )}
+                                                )
+                                            }))}
+                                            isMulti
+                                            className="w-full border border-blackSpike"
+                                            placeholder="search"
+                                        />
+                                    );
+                                }}
                             />
                         </div>
                     </div>
