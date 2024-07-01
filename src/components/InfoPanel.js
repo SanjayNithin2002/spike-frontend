@@ -2,15 +2,15 @@ import React from "react";
 
 const InfoPanel = () => {
     return (
-        <div className="w-4/12 bg-redSpike text-whiteSpike p-8 flex flex-col justify-center items-center h-full">
-            <h1 className="text-8xl font-bold mb-20">spike</h1>
-            <ul className="space-y-4 text-lg">
-                <li>meet spike, a productivity tool that has <span className="font-semibold italic">consequences.</span></li>
-                <li>spike focuses on monitoring your individual metrics and goal enforcement</li>
-                <li>think of spike as your annoying mom who kicks your rear every time you fall behind on your home work</li>
-                <li>so just sign up and get to work bro</li>
-            </ul>
-        </div>
+        <>
+            <div className='w-1/12'></div>
+            <div className="w-5/12 text-neutral-400 flex flex-col justify-evenly items-center h-full">
+                <div className="w-max text-9xl font-semibold flex flex-row items-start">
+                    {'>'}
+                    <h1 className="animate-typing overflow-hidden whitespace-nowrap border-r-2 border-r-neutral-400">{'spike.'}</h1>
+                </div>
+            </div>
+        </>
     )
 }
 
