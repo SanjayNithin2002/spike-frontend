@@ -87,7 +87,7 @@ const Signup = () => {
           <p className="text-sm w-1/2 p-2 text-left">
             {signupError || (errors.name && errors.name.message) || (errors.email && errors.email.message) || (errors.password && errors.password.message) || '*required fields'}
           </p>
-          <button type="submit" className="w-2/12 p-2 text-neutral-900 bg-neutral-100 rounded-full font-medium">
+          <button type="submit" className="w-2/12 p-2 text-neutral-900 bg-neutral-300 hover:bg-neutral-400 rounded-full font-medium">
             {isLoading ? <LoadingIndicator color='neutral-900' /> : 'sign up'}
           </button>
           <p>or continue with</p>

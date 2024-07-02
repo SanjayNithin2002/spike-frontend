@@ -82,15 +82,15 @@ function SelectRepos() {
     }, []);
 
     return (
-        <div className="font-redHat h-screen bg-whitestSpike">
+        <div className="font-poppins h-screen bg-neutral-950 text-neutral-400">
             <NavBar />
 
             <main className="flex-grow flex flex-col items-center justify-center py-8">
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-whiterSpike shadow-md rounded-md p-20 mt-10 pl-10 pr-10 w-full max-w-2xl">
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-neutral-950 text-neutral-400 border-2 border-neutral-800 rounded-3xl w-full max-w-2xl m-20 p-10">
                     <h2 className="text-3xl font-bold text-left text-redSpike mb-2">import git repository</h2>
-                    <p className="text-lg text-left text-redSpike mb-6">select the repositories you want monitored for commits</p>
-                    <div className="mb-4">
-                        <div className="flex items-center mb-2 mt-8">
+                    <p className="text-lg text-left text-redSpike mb-6">select the repositories you want to monitor</p>
+                    <div className="mb-4 flex flex-col items-center justify-center">
+                        <div className="flex items-center mb-2 mt-8 justify-center w-full">
                             <Controller
                                 name="selectedOptions"
                                 control={control}
@@ -129,17 +129,38 @@ function SelectRepos() {
                                                 )
                                             }))}
                                             isMulti
-                                            className="w-full border border-blackSpike"
-                                            placeholder="search"
+                                            className="w-full"
+                                            placeholder="Search"
+                                            styles={{
+                                                control: (baseStyles, state) => ({
+                                                    ...baseStyles,
+                                                    backgroundColor: state.isFocused ? 'rgb(38 38 38)' : 'rgb(38 38 38)',
+                                                    borderColor: state.isFocused ? 'rgb(38 38 38)' : 'rgb(38 38 38)', 
+                                                    borderWidth:  '1px',
+                                                    boxShadow: state.isFocused ? 'rgb(38 38 38)' : 'none',
+                                                }),
+                                                option: (baseStyles, state) => ({
+                                                    ...baseStyles,
+                                                    backgroundColor: state.isFocused ? 'rgb(245 245 245)' : 'rgb(38 38 38)', // Adjust option background color
+                                                    cursor: state.isFocused ? 'pointer': 'default',
+                                                    color: state.isFocused? 'rgb(38 38 38)' : 'rgb(245 245 245)',
+                                                }),
+                                                menu: (baseStyles) => ({
+                                                    ...baseStyles,
+                                                    backgroundColor: 'rgb(38 38 38)',
+                                                    zIndex: 9999,
+                                                }),
+                                            }}
                                         />
                                     );
                                 }}
                             />
                         </div>
+                        <button type="submit" className="mt-4 w-1/4 text-neutral-900 bg-neutral-300 hover:bg-neutral-400 py-2 rounded-full font-medium ">
+                            {isLoading ? <LoadingIndicator /> : 'continue'}
+                        </button>
                     </div>
-                    <button type="submit" className="w-full bg-red-600 text-white py-2 rounded font-bold hover:bg-red-700">
-                        {isLoading ? <LoadingIndicator /> : 'continue'}
-                    </button>
+
                 </form>
             </main>
         </div>
