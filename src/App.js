@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import CreateSpike from './components/CreateSpike';
 import SelectRepos from './components/SelectRepos';
+import Integrations from './components/Integrations';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/createspike" element={<CreateSpike />} />
         <Route path="/selectrepos" element={<SelectRepos/>} />
+        <Route path="/integrations" element={<Integrations/>} />
       </Routes>
     </Router>
   );
