@@ -6,18 +6,20 @@ import Home from './components/Home';
 import CreateSpike from './components/CreateSpike';
 import SelectRepos from './components/SelectRepos';
 import Integrations from './components/Integrations';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" exact element={<Navigate to="/signup" />} />
+        <Route path="/" exact element={<Navigate to="/login" />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/createspike" element={<CreateSpike />} />
         <Route path="/selectrepos" element={<SelectRepos/>} />
         <Route path="/integrations" element={<Integrations/>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

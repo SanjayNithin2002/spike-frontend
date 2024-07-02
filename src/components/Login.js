@@ -12,22 +12,27 @@ const Signup = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
-  const onSubmit = async ({ name, email, password }) => {
+  const onSubmit = async ({ email, password }) => {
     try {
       setIsLoading(true);
       setLoginError(null);
       const response = await fetch('https://spike-backend.vercel.app/users/login', {
+        credentials: 'include',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, password })
+        body: JSON.stringify({ email, password })
       });
+      console.log(response);
       const results = await response.json();
       if (!response.ok) {
         setLoginError(results.error);
       }
       else {
+        const {password, ...user} = results.user;
+        localStorage.setItem('token', results.token);
+        localStorage.setItem('user', JSON.stringify(user));
         navigate('/home');
       }
     }

@@ -3,12 +3,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineCreate, MdOutlineHome, MdGridView } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 import { RiToolsFill, RiSettings3Line } from "react-icons/ri";
-import getCookie from '../middlewares/readCookies';
 
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [sidebarVisible, setSidebarVisible] = useState(false);
-    const user = getCookie('user');
+    const user = JSON.parse(localStorage.getItem('user'));
     useEffect(() => {
         if (isOpen) {
             const timer = setTimeout(() => {
