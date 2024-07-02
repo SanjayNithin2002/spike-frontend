@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { MdOutlineViewAgenda } from "react-icons/md";
 import { MdOutlineCreate, MdOutlineHome, MdGridView } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 import { RiToolsFill, RiSettings3Line } from "react-icons/ri";
 const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [sidebarVisible, setSidebarVisible] = useState(false);
-
+    const user = JSON.parse(localStorage.getItem('user'));
     useEffect(() => {
         if (isOpen) {
             const timer = setTimeout(() => {
@@ -43,11 +42,11 @@ const Sidebar = () => {
                         <ul>
                             <li className="mb-6 ml-3 flex items-center">
                                 <MdOutlineHome className='h-5 w-5 mr-1' />
-                                <a href="#" className="pt-1">Home</a>
+                                <a href="/home" className="pt-1">Home</a>
                             </li>
                             <li className="mb-6 ml-3 flex items-center">
                                 <MdOutlineCreate className='h-5 w-5 mr-1' />
-                                <a href="#" className="pt-1">Create</a>
+                                <a href="/createspike" className="pt-1">Create</a>
                             </li>
                             <li className="mb-6 ml-3 flex items-center">
                                 <MdGridView className='h-5 w-5 mr-1' />
@@ -74,7 +73,7 @@ const Sidebar = () => {
                             className="w-10 h-10 object-cover rounded-full mr-2"
                         />
                         <div>
-                            <p className="font-bold">Geedhavarshini</p>
+                            <p className="font-bold">{(user) ? user.name : 'username'}</p>
                             <p className="text-sm">View Profile</p>
                         </div>
                     </div>

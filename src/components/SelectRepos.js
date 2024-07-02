@@ -37,7 +37,7 @@ function SelectRepos() {
         }));
         console.log(JSON.stringify({ repos: repoData }));
         try {
-            const response = await fetch('https://spike-backend-yxt7.onrender.com/integrations/github/user/createhooks', {
+            const response = await fetch('https://spike-backend.vercel.app/integrations/github/user/createhooks', {
                 method: 'POST',
                 credentials: 'include',
                 headers: {
@@ -63,7 +63,7 @@ function SelectRepos() {
     useEffect(() => {
         const fetchReposFromAPI = async () => {
             try {
-                const response = await fetch('https://spike-backend-yxt7.onrender.com/integrations/github/user/repos', {
+                const response = await fetch('https://spike-backend.vercel.app/integrations/github/user/repos', {
                     credentials: 'include'
                 });
                 const results = await response.json();

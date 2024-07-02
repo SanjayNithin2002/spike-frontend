@@ -29,6 +29,7 @@ const Signup = () => {
       }
       else {
         localStorage.setItem('token', results.token)
+        localStorage.setItem('user', JSON.stringify(results.user));
         navigate('/home');
       }
     }
