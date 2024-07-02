@@ -8,7 +8,7 @@ const App = () => {
         navigate("/createSpike");
     }
     return (
-    <div className='font-redHat h-screen bg-whitestSpike'>
+    <div className='font-poppins h-screen w-full bg-neutral-950 text-neutral-400'>
         <NavBar />
         <div className="bg-graySpike bg-opacity-50 flex flex-col items-left w-full p-20 pl-8">
             <div className="text-blackSpike font-bold text-5xl pl-2 pb-3 pt-5">
