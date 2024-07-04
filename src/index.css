@@ -11,3 +11,23 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: rgb(163 163 163) !important; /* Tailwind color for text-neutral-400 */
   box-shadow: 0 0 0px 1000px rgb(38 38 38) inset !important; /* Tailwind color for bg-neutral-800 */
 }
+/* Add these custom styles to your CSS file */
+.underline-effect {
+  position: relative;
+}
+
+.underline-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition: width 0.7s ease-in-out;
+}
+
+.group:hover .underline-effect::after {
+  width: 100%;
+}
+

@@ -32,12 +32,21 @@ module.exports = {
           "100%": {
             borderColor: "white"
           }  
-        }
+        },
+        underline: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        slideIn: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
       },
       animation: {
-        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
-      }
-      
+        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite",
+        underline: "underline 0.3s ease-in-out forwards",
+        slideIn: "slideIn 0.2s ease-out forwards",
+      },
     },
   },
   plugins: [
