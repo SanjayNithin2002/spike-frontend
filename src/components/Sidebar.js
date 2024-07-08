@@ -4,7 +4,7 @@ import { MdOutlineCreate, MdOutlineHome, MdGridView } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 import { RiToolsFill, RiSettings3Line } from "react-icons/ri";
 
-const Sidebar = () => {
+const Sidebar = ({onToggle}) => {
     const [isOpen, setIsOpen] = useState(false);
     const [sidebarVisible, setSidebarVisible] = useState(false);
     const user = JSON.parse(localStorage.getItem('user'));
@@ -17,17 +17,18 @@ const Sidebar = () => {
         } else {
             setSidebarVisible(false);
         }
-    }, [isOpen]);
+        onToggle(isOpen);
+    }, [isOpen, onToggle]);
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <div className="flex">
+        <div className="flex z-30">
             <button
                 onClick={toggleSidebar}
-                className={`p-2 bg-neutral-950 text-neutral-400 font-poppins fixed top-2 z-20 transition-all duration-300 ${sidebarVisible ? 'left-[18%]' : 'left-2'
+                className={`p-2 bg-neutral-950 text-neutral-400 font-poppins fixed top-2 z-20 transition-all duration-300 ${sidebarVisible ? 'left-[14%]' : 'left-2'
                     }`}
             >
                 <RxHamburgerMenu className='h-6 w-6' />

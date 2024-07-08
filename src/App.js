@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Signup from './components/Signup';
 import Login from './components/Login';
@@ -9,6 +9,7 @@ import Integrations from './components/Integrations';
 import NotFound from './components/NotFound';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   return (
     <Router>
       <Routes>
