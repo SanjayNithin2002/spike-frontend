@@ -4,7 +4,7 @@ import { MdOutlineCreate, MdOutlineHome, MdGridView } from "react-icons/md";
 import { IoAnalytics } from "react-icons/io5";
 import { RiToolsFill, RiSettings3Line } from "react-icons/ri";
 
-const Sidebar = ({onToggle}) => {
+const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [sidebarVisible, setSidebarVisible] = useState(false);
     const user = JSON.parse(localStorage.getItem('user'));
@@ -17,8 +17,7 @@ const Sidebar = ({onToggle}) => {
         } else {
             setSidebarVisible(false);
         }
-        onToggle(isOpen);
-    }, [isOpen, onToggle]);
+    }, [isOpen]);
 
     const toggleSidebar = () => {
         setIsOpen(!isOpen);

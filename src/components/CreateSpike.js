@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import Select from "react-select";
 import { BiSolidPlusSquare } from "react-icons/bi";
-import "./App.css";
 import { RiGitBranchFill } from "react-icons/ri";
 
 const options = [
@@ -14,7 +13,6 @@ const options = [
 ];
 
 const CreateSpike = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleChange = (option) => {
@@ -28,7 +26,7 @@ const CreateSpike = () => {
 
   return (
     <div className="container flex h-screen font-poppins w-full bg-neutral-950 text-neutral-400">
-      <Sidebar onToggle={setIsSidebarOpen} />
+      <Sidebar/>
       <div className="inset-0 h-full w-full bg-neutral-950 bg-[radial-gradient(#a3a3a3_1px,transparent_0.5px)] [background-size:35px_35px]">
         <div className="flex flex-col items-center">
           <div className="flex flex-col justify-center items-center border-2 border-neutral-600 w-96 h-36 rounded-xl mt-32 bg-neutral-950 p-4">

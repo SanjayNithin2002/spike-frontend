@@ -83,7 +83,7 @@ function SelectRepos() {
 
     return (
         <div className="font-poppins h-screen bg-neutral-950 text-neutral-400">
-            <Sidebar />
+            {/* <Sidebar/>  */}
 
             <main className="flex-grow flex flex-col items-center justify-center py-8">
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-neutral-950 text-neutral-400 border-2 border-neutral-800 rounded-3xl w-full max-w-2xl m-20 p-10">

@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import { useNavigate } from "react-router-dom";
-import "./App.css";
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const navigate = useNavigate();
   const gotToCreateSpike = () => {
     navigate("/createSpike");
   };
   return (
     <div className="container flex h-screen font-poppins w-full bg-neutral-950 text-neutral-400">
-      <Sidebar onToggle={setIsSidebarOpen} />
+      <Sidebar/>
       <div className="flex flex-col justify-center">
         <div className="flex flex-row justify-between">
           <div className="group relative h-64 flex flex-col pl-32 mt-10 ml-10 mr-28">
